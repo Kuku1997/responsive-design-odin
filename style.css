@@ -1,0 +1,249 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* Everything above this comment is a reset to ensure standartization of browser and/or operating system defaults */
+
+/* next 5 rulesets are for the positioning of the header */
+#siteHead {
+  display: flex;
+  background-color: lightcoral;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.logo {
+  width: 10%;
+  margin-right: 10px;
+  background-color: lightgreen;
+}
+
+#navigation {
+  width: 80%;
+}
+
+.navList {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 0.9em;
+}
+
+.navItems {
+  padding-left: 20px;
+}
+
+.search {
+  width: 10%;
+  background-color: lightslategray;
+}
+
+/* following rulesets are for main article lay out */
+
+.mainArticleGrid {
+  width: 100%;
+  height: 400px;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "mainArticle sideArticleTop"
+    "mainArticle sideArticleBtm";
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.article1 {
+  grid-area: mainArticle;
+  background-color: lightcyan;
+}
+
+.article2 {
+  grid-area: sideArticleTop;
+  background-color: burlywood;
+}
+
+.article3 {
+  grid-area: sideArticleBtm;
+  background-color: aquamarine;
+}
+
+/* following rulesets are for the latest news grid layout */
+
+.sectionHeader {
+  font-size: 1.5em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-left: 20px;
+}
+
+.latestNewsContainer {
+  display: grid;
+  width: 100%;
+  height: 500px;
+  margin: 10px 0;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.latestArticles {
+  background-color: lightgoldenrodyellow;
+}
+
+/* following rulesets are for the funding grid layout */
+
+.fundingNav {
+  width: 25%;
+  padding: 10px 20px;
+}
+
+.fundingNavList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fundingContainer {
+  width: 100%;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+}
+
+.fundingItem {
+  background-color: lightskyblue;
+}
