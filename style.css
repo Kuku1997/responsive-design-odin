@@ -152,6 +152,13 @@ html {
   width: 80%;
 }
 
+/* for mobile/small screens */
+@media screen and (max-width: 770px) {
+  #navigation {
+    display: none;
+  }
+}
+
 .navList {
   height: 100%;
   display: flex;
@@ -171,6 +178,7 @@ html {
 
 /* following rulesets are for main article lay out */
 
+/* for large screen (over1025px) */
 .mainArticleGrid {
   width: 100%;
   height: 400px;
@@ -183,6 +191,23 @@ html {
     "mainArticle sideArticleBtm";
   column-gap: 10px;
   row-gap: 10px;
+}
+
+/* for mobile/small screens (under770px) */
+@media screen and (max-width: 770px) {
+  .mainArticleGrid {
+    width: 100%;
+    height: 400px;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "mainArticle"
+      "sideArticleTop"
+      "sideArticleBtm";
+    row-gap: 10px;
+  }
 }
 
 .article1 {
@@ -209,6 +234,7 @@ html {
   margin-left: 20px;
 }
 
+/* for large screen (over1025px) */
 .latestNewsContainer {
   display: grid;
   width: 100%;
@@ -218,6 +244,34 @@ html {
   grid-template-rows: repeat(2, 1fr);
   row-gap: 10px;
   column-gap: 10px;
+}
+
+/* for mid screen (770 - 1025px) */
+@media screen and (max-width: 1025px) {
+  .latestNewsContainer {
+    display: grid;
+    width: 100%;
+    height: 500px;
+    margin: 10px 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+}
+
+/* for mobile/small screens (under770px) */
+@media screen and (max-width: 770px) {
+  .latestNewsContainer {
+    display: grid;
+    width: 100%;
+    height: 500px;
+    margin: 10px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+  }
 }
 
 .latestArticles {
@@ -236,12 +290,36 @@ html {
   justify-content: space-between;
 }
 
+/* for mobile/small screens (under770px) */
+@media screen and (max-width: 770px) {
+  .fundingNavList {
+    display: block;
+    line-height: 1.5em;
+  }
+  .fundingNav {
+    width: 100%;
+  }
+}
+
+/* for large screen (over1025px) */
 .fundingContainer {
   width: 100%;
   height: 500px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10px;
+}
+
+/* for mobile/small screens (under770px) */
+@media screen and (max-width: 770px) {
+  .fundingContainer {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+  }
 }
 
 .fundingItem {
